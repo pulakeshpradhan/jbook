@@ -6,6 +6,16 @@ execute:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_download_button: true
+  use_fullscreen_button: true
 repository:
   url: https://github.com/pulakeshpradhan/jbook
+  path_to_book: ./
   branch: main
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - amsmath
+    - deflist
+    - html_image
