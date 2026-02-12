@@ -1,0 +1,43 @@
+# Jupyter Book artifacts
+_build/
+.jupyter_cache/
+_static/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Lab/Notebook
+.ipynb_checkpoints
+.jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Environment files
+.env
+.venv
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db

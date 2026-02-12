@@ -21,4 +21,13 @@ To add a new Jupyter Notebook (`.ipynb`) to this book, follow these steps:
     git push origin main
     ```
 
+## Safety & Security Measures
+
+To keep the repository clean and secure, follow these guidelines:
+
+1. **Never commit secrets**: Do not include API keys, passwords, or personal credentials in your notebooks. Use environment variables or GitHub Secrets instead.
+2. **Ignored files**: A `.gitignore` has been added to prevent building artifacts (like `_build/`) and temporary cache files from being pushed to GitHub.
+3. **Environment isolation**: It is recommended to work within a virtual environment (`venv`).
+4. **GitHub Actions**: The deployment workflow uses `${{ secrets.GITHUB_TOKEN }}` which is a short-lived, secure token provided by GitHub. No manual tokens are stored in the code.
+
 The book will automatically rebuild if you have GitHub Actions set up.
