@@ -2,8 +2,10 @@
 
 To add a new Jupyter Notebook (`.ipynb`) to this book, follow these steps:
 
-1. **Add the file**: Place your new `.ipynb` file in the root directory (or a subdirectory like `content/`).
+1. **Create the file**: Place your new `.ipynb` or `.md` file in the root directory. **Important:** The filename must literally match what you type in the next step.
 2. **Update `_toc.yml`**: Open the `_toc.yml` file and add the filename (without the extension) under the `chapters` section.
+    * **WARNING**: Use the key `file:`, not `fuke:` or `name:`.
+    * **WARNING**: If you add a file to `_toc.yml` but haven't created the actual file yet, the build will fail and the website will show a "404 Not Found" or a blank page.
 
     Example:
 
