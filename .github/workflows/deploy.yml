@@ -1,0 +1,39 @@
+name: deploy-book
+
+on:
+  # Trigger the workflow on push to main branch
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install python and dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install jupyter-book ghp-import
+          pip install xarray numpy pandas matplotlib cartopy # Common GIS libs since user has GIS notebook
+
+      # Build the book
+      - name: Build the book
+        run: |
+          jupyter-book build .
+
+      # Deploy the book to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html

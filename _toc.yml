@@ -1,0 +1,5 @@
+format: jb-book
+root: intro
+chapters:
+- file: xarray_aggregating_time_series
+- file: contributing

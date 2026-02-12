@@ -1,0 +1,11 @@
+title: OpenGIS documentation
+author: Pulakesh Pradhan
+logo: logo.png
+execute:
+  execute_notebooks: auto
+html:
+  use_issues_button: true
+  use_repository_button: true
+repository:
+  url: https://github.com/pulakeshpradhan/jbook
+  branch: main
